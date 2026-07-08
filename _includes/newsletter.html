@@ -1,16 +1,30 @@
-<div class="newsletter-signup my-4 py-3 border-top">
+<div class="newsletter-signup my-4 py-3 border-top text-center">
+  <p class="mb-2">Ricevi i nuovi articoli via email, senza spam.</p>
+
   <form
     action="https://buttondown.com/api/emails/embed-subscribe/enrico-mautone"
     method="post"
-    class="embeddable-buttondown-form"
+    class="embeddable-buttondown-form d-flex justify-content-center"
   >
-    <label for="bd-email">Enter your email</label>
-    <input type="email" name="email" id="bd-email" />
-    <input type="submit" value="Subscribe" />
-    <p>
-      <a href="https://buttondown.com/refer/enrico-mautone" target="_blank">
+    <div class="input-group" style="max-width: 400px;">
+      <label for="bd-email" class="visually-hidden">Enter your email</label>
+      <input
+        type="email"
+        name="email"
+        id="bd-email"
+        class="form-control"
+        placeholder="La tua email"
+        required
+      />
+      <button type="submit" class="btn btn-outline-primary">Subscribe</button>
+    </div>
+  </form>
+
+  <p class="mt-2 mb-0">
+    <small class="text-muted">
+      <a href="https://buttondown.com/refer/enrico-mautone" target="_blank" rel="noopener">
         Powered by Buttondown.
       </a>
-    </p>
-  </form>
+    </small>
+  </p>
 </div>
