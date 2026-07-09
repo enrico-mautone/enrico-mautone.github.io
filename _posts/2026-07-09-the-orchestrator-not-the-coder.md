@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "L'orchestratore, non il programmatore"
+title: "L'orchestratore, non il programmatore - 54 giorni all'alba"
 date: 2026-07-09 09:00:00 +0200
 categories: [ai, career]
 tags: [ai-agents, career-transition, cto, agentic-ai]
