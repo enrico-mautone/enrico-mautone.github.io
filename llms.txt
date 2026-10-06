@@ -4,8 +4,8 @@
 > in software. Since September 2026 he is CTO & Head of AI at Stories srl, an AI
 > startup building a conversational companion for older adults. His blog is about
 > what really happens when you try to build an AI product: the choices, the mistakes,
-> and the hard parts no demo shows. Blog tagline: "Appunti dal cantiere di un
-> prodotto AI" (Building AI products — from the trenches). He is positioning himself
+> and the hard parts no demo shows. Blog tagline: "Building AI products —
+> from the trenches". He is positioning himself
 > as a technical co-founder / CTO-level partner for early-stage AI ventures.
 
 ## Who he is
