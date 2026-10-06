@@ -51,43 +51,19 @@ jobs:
       - name: Check multilingual output
         run: |
           set -e
+          IT=_site/posts/the-orchestrator-not-the-coder/index.html
+          EN=_site/en/posts/the-orchestrator-not-the-coder/index.html
+          FB=_site/en/posts/ma-tu-quanto-sei-maturo/index.html
           test -f _site/en/index.html
-          grep -q 'The orchestrator, not the coder' _site/en/posts/the-orchestrator-not-the-coder/index.html
-          grep -q "L'orchestratore\|L&#39;orchestratore\|L’orchestratore" _site/posts/the-orchestrator-not-the-coder/index.html
+          grep -q '<html lang="en"' _site/en/index.html
+          grep -q 'The orchestrator, not the coder' "$EN"
+          grep -q 'hreflang="en" href="https://enrico-mautone.github.io/en/posts/the-orchestrator-not-the-coder/"' "$IT"
+          grep -q 'Read in English' "$IT"
+          grep -q 'Leggi in italiano' "$EN"
+          ! grep -q 'noindex' "$EN"
+          grep -q 'noindex' "$FB"
+          ! grep -q 'noindex' "$IT"
           grep -q 'orchestrator-not-the-coder' _site/en/feed.xml
           ! grep -q '/en/posts/' _site/feed.xml
+          grep -q 'START HERE' _site/en/index.html
           echo "Multilingual output OK"
-
-      - name: Report multilingual details
-        if: always()
-        run: |
-          set +e
-          o() { echo "== $1"; grep -o "$2" "$3" 2>&1 | head -${4:-6} | cut -c1-220; }
-          {
-            o "html lang /" '<html lang="[^"]*"' _site/index.html
-            o "html lang /en/" '<html lang="[^"]*"' _site/en/index.html
-            o "switch /" 'lang-switch">.\{0,160\}' _site/index.html
-            o "switch /en/" 'lang-switch">.\{0,160\}' _site/en/index.html
-            o "switch /en/ on post" 'lang-switch">.\{0,160\}' _site/en/posts/the-orchestrator-not-the-coder/index.html
-            o "head en orch" '<link rel="\(canonical\|alternate\)"[^>]*>' _site/en/posts/the-orchestrator-not-the-coder/index.html 8
-            o "head it orch" '<link rel="\(canonical\|alternate\)"[^>]*>' _site/posts/the-orchestrator-not-the-coder/index.html 8
-            o "head en fallback" '<link rel="\(canonical\|alternate\)"[^>]*>' _site/en/posts/ma-tu-quanto-sei-maturo/index.html 8
-            o "langalt it orch" 'lang-alt-link.\{0,200\}' _site/posts/the-orchestrator-not-the-coder/index.html 2
-            o "langalt en orch" 'lang-alt-link.\{0,200\}' _site/en/posts/the-orchestrator-not-the-coder/index.html 2
-            o "langalt en fallback" 'lang-alt-link.\{0,200\}' _site/en/posts/ma-tu-quanto-sei-maturo/index.html 2
-            o "post-meta en orch" 'post-meta.\{0,120\}' _site/en/posts/the-orchestrator-not-the-coder/index.html 1
-            o "tabs en" 'nav-link">.\{0,80\}' _site/en/index.html 8
-            o "home en titles" 'card-title[^>]*>[^<]*' _site/en/index.html 8
-            o "home it titles" 'card-title[^>]*>[^<]*' _site/index.html 8
-            o "feed it" '<title>[^<]*</title>' _site/feed.xml 8
-            o "feed en" '<title>[^<]*</title>' _site/en/feed.xml 8
-            echo "== en dirs"; ls _site/en | tr '\n' ' '; echo
-            echo "== en categories"; ls _site/en/categories 2>&1 | tr '\n' ' '; echo
-            echo "== en assets"; ls _site/en/assets 2>&1 | tr '\n' ' '; echo
-            echo "== sitemap /en/ entries"; grep -c '/en/' _site/sitemap.xml
-          } > report.txt
-          split -l 40 report.txt part_
-          for f in part_*; do
-            msg=$(sed 's/%/%25/g' "$f" | sed ':a;N;$!ba;s/\n/%0A/g')
-            echo "::notice title=Multilingual report $f::${msg}"
-          done
