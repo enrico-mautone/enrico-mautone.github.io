@@ -1,6 +1,6 @@
 ---
-# Override of Chirpy v7.6.0 assets/feed.xml: Italian posts only (English ones are in /en/feed.xml).
-# Buttondown reads this feed: without the filter, Italian subscribers would get English posts.
+# Override of Chirpy v7.6.0 assets/feed.xml. Built once per language by jekyll-polyglot:
+# /feed.xml = Italian posts only (read by Buttondown), /en/feed.xml = English translations only.
 layout: compress
 permalink: /feed.xml
 # Atom Feed, reference: https://validator.w3.org/feed/docs/atom.html
@@ -24,7 +24,11 @@ permalink: /feed.xml
   <icon>{{ site.baseurl }}/assets/img/favicons/favicon.ico</icon>
   <logo>{{ site.baseurl }}/assets/img/favicons/favicon-96x96.png</logo>
 
-{% assign feed_posts = site.posts | where_exp: 'item', 'item.lang != "en"' %}
+{% if site.active_lang == 'en' %}
+  {% assign feed_posts = site.posts | where: 'lang', 'en' %}
+{% else %}
+  {% assign feed_posts = site.posts | where_exp: 'item', 'item.lang != "en"' %}
+{% endif %}
 {% for post in feed_posts limit: 5 %}
   {% assign post_absolute_url = post.url | absolute_url %}
   <entry>

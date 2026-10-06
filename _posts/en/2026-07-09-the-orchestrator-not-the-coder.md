@@ -4,7 +4,6 @@ title: "The orchestrator, not the coder"
 date: 2026-07-09 09:00:00 +0200
 categories: [il-timone]
 tags: [ai-agents, career-transition, cto, agentic-ai]
-ref: orchestrator-not-coder
 ---
 
 *Originally published in Italian on July 9, 2026, a few weeks before I started as CTO.*
@@ -43,4 +42,4 @@ I'm doing it in public because the place I'm writing from — someone with a tra
 
 ## What to expect
 
-Expect posts that follow the real construction of an AI product, the agents and tools I end up trusting (or giving up on), and the moments when "orchestrating" turns out to be harder than it sounds. If you want to follow along, the [English posts are collected here](/en/), with their own [RSS feed](/en/feed.xml).
+Expect posts that follow the real construction of an AI product, the agents and tools I end up trusting (or giving up on), and the moments when "orchestrating" turns out to be harder than it sounds. If you want to follow along, the English posts have their own [RSS feed](/feed.xml).

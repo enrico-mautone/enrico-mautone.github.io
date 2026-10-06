@@ -1,0 +1,14 @@
+{% comment %}
+  Override of Chirpy v7.6.0 _includes/lang.html.
+  With jekyll-polyglot the interface follows the language being built (site.active_lang),
+  so the English site has an English interface even for posts available only in Italian.
+{% endcomment %}
+{% if site.active_lang and site.data.locales[site.active_lang] %}
+  {% assign lang = site.active_lang %}
+{% elsif site.data.locales[page.lang] %}
+  {% assign lang = page.lang %}
+{% elsif site.data.locales[site.lang] %}
+  {% assign lang = site.lang %}
+{% else %}
+  {% assign lang = 'en' %}
+{% endif %}

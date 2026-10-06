@@ -1,47 +1,58 @@
-<!-- Custom: link to the translation of the current post + suggestion banner based on the browser language.
-     Two posts are translations of each other when they share the same `ref` in the front matter.
-     The link is rendered here (footer) and moved by the script under the post title. -->
-{% if page.ref %}
-  {% assign _page_lang = page.lang | default: 'it' | slice: 0, 2 %}
-  {% assign _translations = site.posts | where: 'ref', page.ref %}
-  {% for t in _translations %}
-    {% assign _t_lang = t.lang | default: 'it' | slice: 0, 2 %}
-    {% if t.url != page.url %}
-      {% if _t_lang == 'en' %}
-        {% assign _label = 'Read in English' %}
-        {% assign _banner = 'This post is also available in English.' %}
-        {% assign _cta = 'Read it' %}
-        {% assign _close = 'Close' %}
-      {% else %}
-        {% assign _label = 'Leggi in italiano' %}
-        {% assign _banner = 'Questo articolo è disponibile anche in italiano.' %}
-        {% assign _cta = 'Leggilo' %}
-        {% assign _close = 'Chiudi' %}
-      {% endif %}
+<!-- Custom: language notes for posts + suggestion banner based on the browser language (jekyll-polyglot).
+     An Italian post that has an English version declares it with `translations: [en]` in the front matter;
+     the English version lives in _posts/en/ with the same file name. -->
+{% if page.layout == 'post' %}
+  {% assign _doc_lang = page.lang | default: site.default_lang | slice: 0, 2 %}
+  {% assign _site_lang = site.active_lang | slice: 0, 2 %}
+  {% assign _note = nil %}
+  {% assign _banner = nil %}
 
-      <p class="lang-alt-link text-center small" data-lang="{{ _t_lang }}">
-        <i class="fas fa-language fa-fw"></i>
-        <a href="{{ t.url | relative_url }}" hreflang="{{ _t_lang }}" lang="{{ _t_lang }}">{{ _label }}</a>
-      </p>
+  {% if _site_lang == 'en' and _doc_lang == 'en' %}
+    {% capture _href %}{% static_href %}{{ page.url }}{% endstatic_href %}{% endcapture %}
+    {% assign _note = 'Leggi in italiano' %}
+    {% assign _target = 'it' %}
+    {% assign _banner = 'Questo articolo è disponibile anche in italiano.' %}
+    {% assign _cta = 'Leggilo' %}
+    {% assign _close = 'Chiudi' %}
+  {% elsif _site_lang == 'en' %}
+    {% capture _href %}{% static_href %}{{ page.url }}{% endstatic_href %}{% endcapture %}
+    {% assign _note = 'This post is available in Italian only — open the original' %}
+    {% assign _target = 'it' %}
+  {% elsif page.translations contains 'en' %}
+    {% capture _href %}{% static_href %}/en{{ page.url }}{% endstatic_href %}{% endcapture %}
+    {% assign _note = 'Read in English' %}
+    {% assign _target = 'en' %}
+    {% assign _banner = 'This post is also available in English.' %}
+    {% assign _cta = 'Read it' %}
+    {% assign _close = 'Close' %}
+  {% endif %}
 
-      <div
-        class="lang-alt-banner alert alert-info d-flex align-items-center justify-content-between"
-        role="region"
-        aria-label="{{ _banner }}"
-        data-target-lang="{{ _t_lang }}"
-        data-page-lang="{{ _page_lang }}"
-        lang="{{ _t_lang }}"
-        hidden
-      >
-        <span>
-          {{ _banner }}
-          <a href="{{ t.url | relative_url }}" hreflang="{{ _t_lang }}" class="alert-link">{{ _cta }} &rarr;</a>
-        </span>
-        <button type="button" class="btn-close ms-3" aria-label="{{ _close }}"></button>
-      </div>
-    {% endif %}
-  {% endfor %}
+  {% if _note %}
+    <p class="lang-alt-link text-center small">
+      <i class="fas fa-language fa-fw"></i>
+      <a href="{{ _href | strip }}" hreflang="{{ _target }}" lang="{{ _target }}">{{ _note }}</a>
+    </p>
+  {% endif %}
 
+  {% if _banner %}
+    <div
+      class="lang-alt-banner alert alert-info d-flex align-items-center justify-content-between"
+      role="region"
+      aria-label="{{ _banner }}"
+      data-target-lang="{{ _target }}"
+      data-page-lang="{{ _site_lang }}"
+      lang="{{ _target }}"
+      hidden
+    >
+      <span>
+        {{ _banner }}
+        <a href="{{ _href | strip }}" hreflang="{{ _target }}" class="alert-link">{{ _cta }} &rarr;</a>
+      </span>
+      <button type="button" class="btn-close ms-3" aria-label="{{ _close }}"></button>
+    </div>
+  {% endif %}
+
+  {% if _note %}
   <script>
     (function () {
       var KEY = 'lang-banner-dismissed';
@@ -82,4 +93,5 @@
       }
     })();
   </script>
+  {% endif %}
 {% endif %}

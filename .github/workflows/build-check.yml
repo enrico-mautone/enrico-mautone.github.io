@@ -27,21 +27,26 @@ jobs:
         env:
           JEKYLL_ENV: "production"
 
+      - name: Upload built site (for inspection)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: _site
+          retention-days: 3
+
       - name: Test site
         run: |
           bundle exec htmlproofer _site \
             --disable-external \
             --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
 
-      - name: Check English section
+      - name: Check multilingual output
         run: |
           set -e
           test -f _site/en/index.html
-          test -f _site/en/posts/the-orchestrator-not-the-coder/index.html
-          test -f _site/en/feed.xml
-          grep -q 'hreflang="en"' _site/posts/the-orchestrator-not-the-coder/index.html
-          grep -q 'lang="en"' _site/en/posts/the-orchestrator-not-the-coder/index.html
+          grep -q 'The orchestrator, not the coder' _site/en/posts/the-orchestrator-not-the-coder/index.html
+          grep -q "L'orchestratore\|L&#39;orchestratore\|L’orchestratore" _site/posts/the-orchestrator-not-the-coder/index.html
+          grep -q 'orchestrator-not-the-coder' _site/en/feed.xml
           ! grep -q '/en/posts/' _site/feed.xml
-          grep -q '/en/posts/the-orchestrator-not-the-coder/' _site/en/feed.xml
-          ! grep -q '/en/posts/' _site/index.html
-          echo "English section OK"
+          echo "Multilingual output OK"

@@ -1,14 +1,2 @@
-<!-- Custom (Chirpy hook): hreflang links between a post and its translation.
-     Two posts are translations of each other when they share the same `ref` in the front matter. -->
-{% if page.ref %}
-  {% assign _translations = site.posts | where: 'ref', page.ref %}
-  {% if _translations.size > 1 %}
-    {% for t in _translations %}
-      {% assign _t_lang = t.lang | default: 'it' | slice: 0, 2 %}
-      <link rel="alternate" hreflang="{{ _t_lang }}" href="{{ t.url | absolute_url }}">
-      {% if _t_lang == 'it' %}
-        <link rel="alternate" hreflang="x-default" href="{{ t.url | absolute_url }}">
-      {% endif %}
-    {% endfor %}
-  {% endif %}
-{% endif %}
+<!-- Custom (Chirpy hook): multilingual headers from jekyll-polyglot -->
+{% I18n_Headers %}

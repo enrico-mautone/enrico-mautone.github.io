@@ -4,7 +4,7 @@ title: "L'orchestratore, non il programmatore - 54 giorni all'alba"
 date: 2026-07-09 09:00:00 +0200
 categories: [il-timone]
 tags: [ai-agents, career-transition, cto, agentic-ai]
-ref: orchestrator-not-coder
+translations: [en]
 ---
 
 A settembre farò un salto di carriera: da un ruolo di service/delivery management in consulenza enterprise a CTO di una startup AI appena nata. Sulla carta suona come la solita storia — il manager che torna finalmente tecnico. Non è così. E spiegare perché è il motivo per cui nasce questo blog.

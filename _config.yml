@@ -8,6 +8,13 @@ theme: jekyll-theme-chirpy
 # otherwise, the layout language will use the default value of 'en'.
 lang: it-IT
 
+# Multilingual (jekyll-polyglot). The default language has no URL prefix; English lives under /en/.
+# A post and its translation share the same permalink (same file name, English one in _posts/en/).
+languages: ["it-IT", "en"]
+default_lang: "it-IT"
+exclude_from_localization: ["assets/img", "assets/lib", "assets/js", "assets/css", "tools"]
+parallel_localization: false
+
 # Change to your timezone › https://zones.arilyn.cc
 timezone: Europe/Rome
 
@@ -187,12 +194,10 @@ defaults:
       # to update the code of all other post links in this project.
       permalink: /posts/:title/
   - scope:
-      path: "_posts/en" # English translations
+      path: "_posts/en" # English translations: same file name as the Italian post
       type: posts
     values:
       lang: en
-      hidden: true # not listed on the Italian home page; listed on /en/
-      permalink: /en/posts/:title/
   - scope:
       path: _drafts
     values:
