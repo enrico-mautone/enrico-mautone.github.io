@@ -57,3 +57,34 @@ jobs:
           grep -q 'orchestrator-not-the-coder' _site/en/feed.xml
           ! grep -q '/en/posts/' _site/feed.xml
           echo "Multilingual output OK"
+
+      - name: Report multilingual details
+        if: always()
+        run: |
+          r() { echo "== $1"; shift; "$@" 2>&1 | head -12; }
+          {
+            r "html lang /" grep -o '<html[^>]*lang="[^"]*"' _site/index.html
+            r "html lang /en/" grep -o '<html[^>]*lang="[^"]*"' _site/en/index.html
+            r "switch /" grep -o '<a [^>]*hreflang="en"[^>]*class="nav-link"[^>]*>\|<li class="nav-item lang-switch">' _site/index.html
+            r "switch hrefs /" grep -A3 'lang-switch' _site/index.html
+            r "switch hrefs /en/" grep -A3 'lang-switch' _site/en/index.html
+            r "head en orchestrator" grep -o '<link rel="\(canonical\|alternate\)"[^>]*>\|<meta http-equiv="Content-Language"[^>]*>' _site/en/posts/the-orchestrator-not-the-coder/index.html
+            r "head it orchestrator" grep -o '<link rel="\(canonical\|alternate\)"[^>]*>' _site/posts/the-orchestrator-not-the-coder/index.html
+            r "head en fallback maturo" grep -o '<link rel="\(canonical\|alternate\)"[^>]*>' _site/en/posts/ma-tu-quanto-sei-maturo/index.html
+            r "langalt it orch" grep -A2 'lang-alt-link' _site/posts/the-orchestrator-not-the-coder/index.html
+            r "langalt en orch" grep -A2 'lang-alt-link' _site/en/posts/the-orchestrator-not-the-coder/index.html
+            r "langalt en fallback" grep -A2 'lang-alt-link' _site/en/posts/ma-tu-quanto-sei-maturo/index.html
+            r "posted label en" grep -o 'Posted\|Pubblicato[^<]*' _site/en/posts/the-orchestrator-not-the-coder/index.html
+            r "en dirs" ls _site/en
+            r "en categories" ls _site/en/categories
+            r "assets under en?" ls _site/en/assets
+            r "css link en" grep -o '<link rel="stylesheet" href="[^"]*"' _site/en/index.html
+            r "home en titles" grep -o '<h1 class="card-title[^>]*>[^<]*' _site/en/index.html
+            r "home it titles" grep -o '<h1 class="card-title[^>]*>[^<]*' _site/index.html
+            r "feed it" grep -o '<title>[^<]*</title>' _site/feed.xml
+            r "feed en" grep -o '<title>[^<]*</title>' _site/en/feed.xml
+            r "llms" ls -la _site/llms.txt _site/en/llms.txt
+            r "sitemap en entries" grep -c '/en/' _site/sitemap.xml
+          } > report.txt
+          msg=$(sed 's/%/%25/g' report.txt | sed ':a;N;$!ba;s/\n/%0A/g')
+          echo "::notice title=Multilingual report::${msg}"
