@@ -193,6 +193,7 @@ defaults:
       # DO NOT modify the following parameter unless you are confident enough
       # to update the code of all other post links in this project.
       permalink: /posts/:title/
+      lang: it-IT # explicit, so jekyll-polyglot can tell Italian posts from translations
   - scope:
       path: "_posts/en" # English translations: same file name as the Italian post
       type: posts
@@ -208,6 +209,12 @@ defaults:
     values:
       layout: page
       permalink: /:title/
+      lang: it-IT
+  - scope:
+      path: "_tabs/en" # English versions of the tabs: same file name as the Italian one
+      type: tabs
+    values:
+      lang: en
 
 sass:
   style: compressed

@@ -1,2 +1,19 @@
-<!-- Custom (Chirpy hook): multilingual headers from jekyll-polyglot -->
-{% I18n_Headers %}
+<!-- Custom (Chirpy hook): multilingual headers for jekyll-polyglot.
+     - hreflang only between a post and its real translation (Italian post with `translations: [en]`,
+       English post in _posts/en/ with the same file name)
+     - pages of the English site whose content is still Italian (fallback) are not indexed,
+       so search engines don't see them as duplicates of the Italian originals -->
+{% assign _doc_lang = page.lang | default: site.default_lang | slice: 0, 2 %}
+{% assign _site_lang = site.active_lang | slice: 0, 2 %}
+
+{% if _site_lang == 'en' and _doc_lang != 'en' %}
+  <meta name="robots" content="noindex, follow">
+{% endif %}
+
+{% if page.layout == 'post' %}
+  {% if _doc_lang == 'en' or page.translations contains 'en' %}
+    <link rel="alternate" hreflang="it" {% static_href %}href="{{ site.url }}{{ page.url }}"{% endstatic_href %}>
+    <link rel="alternate" hreflang="x-default" {% static_href %}href="{{ site.url }}{{ page.url }}"{% endstatic_href %}>
+    <link rel="alternate" hreflang="en" {% static_href %}href="{{ site.url }}/en{{ page.url }}"{% endstatic_href %}>
+  {% endif %}
+{% endif %}
