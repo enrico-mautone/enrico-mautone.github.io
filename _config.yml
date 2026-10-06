@@ -187,6 +187,13 @@ defaults:
       # to update the code of all other post links in this project.
       permalink: /posts/:title/
   - scope:
+      path: "_posts/en" # English translations
+      type: posts
+    values:
+      lang: en
+      hidden: true # not listed on the Italian home page; listed on /en/
+      permalink: /en/posts/:title/
+  - scope:
       path: _drafts
     values:
       comments: false

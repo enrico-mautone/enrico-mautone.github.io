@@ -1,0 +1,56 @@
+<!-- Override of Chirpy v7.6.0 _includes/post-nav.html:
+     previous/next are computed among posts in the same language as the current one -->
+
+{% assign _page_lang = page.lang | default: 'it' | slice: 0, 2 %}
+{% assign _same_lang = '' | split: '' %}
+{% for p in site.posts %}
+  {% assign _p_lang = p.lang | default: 'it' | slice: 0, 2 %}
+  {% if _p_lang == _page_lang %}
+    {% assign _same_lang = _same_lang | push: p %}
+  {% endif %}
+{% endfor %}
+
+{% assign _newer = nil %}
+{% assign _older = nil %}
+{% for p in _same_lang %}
+  {% if p.url == page.url %}
+    {% assign _i_newer = forloop.index0 | minus: 1 %}
+    {% assign _i_older = forloop.index0 | plus: 1 %}
+    {% if _i_newer >= 0 %}{% assign _newer = _same_lang[_i_newer] %}{% endif %}
+    {% if _i_older < _same_lang.size %}{% assign _older = _same_lang[_i_older] %}{% endif %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
+<nav class="post-navigation d-flex justify-content-between" aria-label="Post Navigation">
+  {% assign previous = site.data.locales[include.lang].post.button.previous %}
+  {% assign next = site.data.locales[include.lang].post.button.next %}
+
+  {% if _older %}
+    <a
+      href="{{ site.baseurl }}{{ _older.url }}"
+      class="btn btn-outline-primary"
+      aria-label="{{ previous }}"
+    >
+      <p>{{ _older.title }}</p>
+    </a>
+  {% else %}
+    <div class="btn btn-outline-primary disabled" aria-label="{{ previous }}">
+      <p>-</p>
+    </div>
+  {% endif %}
+
+  {% if _newer %}
+    <a
+      href="{{ site.baseurl }}{{ _newer.url }}"
+      class="btn btn-outline-primary"
+      aria-label="{{ next }}"
+    >
+      <p>{{ _newer.title }}</p>
+    </a>
+  {% else %}
+    <div class="btn btn-outline-primary disabled" aria-label="{{ next }}">
+      <p>-</p>
+    </div>
+  {% endif %}
+</nav>

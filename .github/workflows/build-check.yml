@@ -1,0 +1,47 @@
+name: "Build check (branches)"
+# Builds and tests the site on any branch except main, without deploying.
+# Useful to validate changes before merging into main.
+on:
+  push:
+    branches-ignore:
+      - main
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.4
+          bundler-cache: true
+
+      - name: Build site
+        run: bundle exec jekyll b -d "_site"
+        env:
+          JEKYLL_ENV: "production"
+
+      - name: Test site
+        run: |
+          bundle exec htmlproofer _site \
+            --disable-external \
+            --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+
+      - name: Check English section
+        run: |
+          set -e
+          test -f _site/en/index.html
+          test -f _site/en/posts/the-orchestrator-not-the-coder/index.html
+          test -f _site/en/feed.xml
+          grep -q 'hreflang="en"' _site/posts/the-orchestrator-not-the-coder/index.html
+          grep -q 'lang="en"' _site/en/posts/the-orchestrator-not-the-coder/index.html
+          ! grep -q '/en/posts/' _site/feed.xml
+          grep -q '/en/posts/the-orchestrator-not-the-coder/' _site/en/feed.xml
+          ! grep -q '/en/posts/' _site/index.html
+          echo "English section OK"
