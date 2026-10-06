@@ -5,19 +5,23 @@
 > startup building a conversational companion for older adults. His blog is about
 > what really happens when you try to build an AI product: the choices, the mistakes,
 > and the hard parts no demo shows. Blog tagline: "Appunti dal cantiere di un
-> prodotto AI" (Building AI products — from the trenches).
+> prodotto AI" (Building AI products — from the trenches). He is positioning himself
+> as a technical co-founder / CTO-level partner for early-stage AI ventures.
 
 ## Who he is
 
 - CTO & Head of AI, Stories srl, Pisa (September 2026 – present). Stories is an AI
   companion that brings meaningful conversations, emotional support and family
-  moments into the daily routine of older adults (https://stories-app.it). He owns
-  the technology stack and builds the product hands-on: LLM-based conversational
+  moments into the daily routine of older adults (https://stories-app.it). Selected
+  among the top 5 finalists of the Startup Geeks Startup Showcase 2026. He owns the
+  technology stack and builds the product hands-on: LLM-based conversational
   agents, long-term memory, Python/FastAPI backend on PostgreSQL, Google Cloud
   Platform, privacy by design (GDPR, EU AI Act).
 - Service Manager, REMIRA Italia (September 2023 – August 2026): IT Service Manager
-  for Gucci on a consulting engagement. Built an internal AI pilot for document
-  recognition (Azure AI Document Intelligence + GPT-4).
+  for Gucci on a consulting engagement, bridging business stakeholders and technical
+  teams up to client executive level; promoted a Teal / self-management approach.
+  Built an internal AI pilot for document recognition (Azure AI Document
+  Intelligence + GPT-4).
 - Business Analyst, iambOO srl (September 2016 – August 2023): consultant at Kyklos
   (now Remira Italia) for international luxury fashion brands.
 - CEO, CTO and co-founder of 4E Studios Srl (October 2011 – August 2016): technology
@@ -29,6 +33,9 @@
 - Degree in Computer Science, University of Pisa. Certified Scrum Master (CSM).
   Certified Obeya Builder and Obeya Host.
 - Languages: Italian (native), English (professional, B2).
+- Skills: LLMs and AI agents, conversational AI (LangChain, LangSmith, Hugging Face),
+  Python (FastAPI, Flask, Django), PostgreSQL, Google Cloud Platform, software
+  architecture, technical leadership, MVP development, Scrum and agile methods.
 
 ## What the blog covers
 
