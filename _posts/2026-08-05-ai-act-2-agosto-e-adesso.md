@@ -2,7 +2,7 @@
 layout: post
 title: "Il 2 agosto è arrivato. E adesso? -27 giorni all'alba"
 date: 2026-08-05 09:00:00 +0200
-categories: [ai, business]
+categories: [il-timone]
 tags: [ai-act, compliance, regolamentazione, gdpr, shadow-ai, cto]
 image:
   path: /assets/img/ai-act-2-agosto-adesso.png
@@ -79,4 +79,4 @@ Il decreto italiano di attuazione, l'AG 421, è ancora in Parlamento — parere 
 
 Il vero tema, per me, non è la multa da evitare. È che mappare i propri sistemi AI, classificarli e vietare l'uso di strumenti personali con dati sensibili è un lavoro che ogni azienda avrebbe dovuto fare comunque, a prescindere da qualsiasi regolamento — un po' come tenere in ordine le password o sapere chi ha accesso a cosa. L'AI Act l'ha solo reso obbligatorio, con una scadenza precisa da rispettare.
 
-Se stai affrontando lo stesso esercizio in questi giorni — o se hai già trovato dello shadow AI in azienda e vuoi confrontarti su come è andata — mi fa piacere parlarne. Sono cose che si capiscono meglio raccontandosele a vicenda che leggendo un regolamento da soli. Sentiamoci!
+Nella tua azienda qualcuno ha già fatto l'inventario degli strumenti AI che si usano davvero, compresi quelli che nessuno ha mai autorizzato? Se lo stai facendo in questi giorni, o hai già trovato dello shadow AI e vuoi confrontarti su come è andata, scrivimi: sono cose che si capiscono meglio raccontandosele a vicenda che leggendo un regolamento da soli. E se vuoi i prossimi aggiornamenti senza doverli cercare, c'è la newsletter qui sotto.

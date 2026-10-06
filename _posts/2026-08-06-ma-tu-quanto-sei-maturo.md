@@ -2,8 +2,8 @@
 layout: post
 title: "Ma tu quanto sei maturo nell'AI Engineering - 26 giorni all'alba"
 date: 2026-08-06 09:00:00 +0200
-categories: [ai, engineering]
-tags: [ai-engineering, context, claude-code, cto-transition]
+categories: [il-metro]
+tags: [ai-engineering, context, claude-code, career-transition]
 image:
   path: /assets/img/8-levels-context-maturity.png
   alt: "Gli 8 livelli di context maturity nell'AI-native engineering, dal tab-complete agli agent swarm autonomi"
@@ -65,4 +65,4 @@ C'è un collegamento che non posso ignorare con quello che mi aspetta tra ventis
 
 Non ho una tesi definitiva da chiudere qui, solo un punto di partenza onesto: sono un livello 2, con margine enorme di miglioramento, e ventisei giorni per fare qualche passo avanti prima che il gioco cambi davvero.
 
-E voi, quanto siete maturi nell'AI engineering? Mi farebbe piacere confrontarmi, sono cose che si capiscono meglio parlandone. Sentiamoci!
+E voi, a che livello siete? E soprattutto: quanta parte del contesto del vostro progetto vive solo nella vostra testa? Scrivetemelo nei commenti qui sotto, sono curioso di sapere se sono l'unico livello 2 in giro. I prossimi passi (e i prossimi livelli, spero) li racconto qui: se volete seguirli, c'è la newsletter.

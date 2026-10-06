@@ -1,48 +1,52 @@
 # Enrico Mautone
 
-> Technology leader and entrepreneur based in Livorno (Tuscany, Italy) with ~20 years
-> of software engineering experience. Transitioning from Service/Delivery Manager
-> at Gucci (via Remira Italy) to CTO and co-founder of Stories, an early-stage AI
-> startup, starting September 2026. Writes this blog about AI, software development,
-> and how the world is changing.
+> Technology leader and entrepreneur based in Livorno (Tuscany, Italy) with 20 years
+> in software. Since September 2026 he is CTO & Head of AI at Stories srl, an AI
+> startup building a conversational companion for older adults. His blog is about
+> what really happens when you try to build an AI product: the choices, the mistakes,
+> and the hard parts no demo shows. Blog tagline: "Appunti dal cantiere di un
+> prodotto AI" (Building AI products — from the trenches).
 
-## Who I am
+## Who he is
 
-- ~20 years in software: started as a C/C++ developer, later Java/Java EE, C#,
-  Python (Flask/FastAPI/Django), PL/SQL.
-- Degree in Computer Science, University of Pisa (2003-2009). Certified Scrum
-  Master (CSM). Certified Obeya Builder and Obeya Host.
-- Innovation & Technology Manager at Remira Italy (Sept 2023-present), leading
-  strategic software delivery for corporate clients.
-- Service and Delivery Manager / Team Tech Leader at Gucci, via Remira, Florence,
-  Italy (Sept 2016-Sept 2023): IT service delivery, business process analysis,
-  supplier management.
-- CEO, CTO and co-founder of 4E Studios Srl (Oct 2011-March 2018): technology
-  studio delivering MVPs and feasibility studies for startups in food, medical,
-  and entertainment (video games, VR, AR).
-- Earlier: freelance Oracle PL/SQL developer for logistics (2009-2011), lead
-  programmer on a Java EE system for a UN military base in Morocco (2008), web/DB
-  programmer building a custom web crawler in Visual Basic (2005-2006).
-- Languages: Italian (native), English (proficient, B2 CEFR).
+- CTO & Head of AI, Stories srl, Pisa (September 2026 – present). Stories is an AI
+  companion that brings meaningful conversations, emotional support and family
+  moments into the daily routine of older adults (https://stories-app.it). He owns
+  the technology stack and builds the product hands-on: LLM-based conversational
+  agents, long-term memory, Python/FastAPI backend on PostgreSQL, Google Cloud
+  Platform, privacy by design (GDPR, EU AI Act).
+- Service Manager, REMIRA Italia (September 2023 – August 2026): IT Service Manager
+  for Gucci on a consulting engagement. Built an internal AI pilot for document
+  recognition (Azure AI Document Intelligence + GPT-4).
+- Business Analyst, iambOO srl (September 2016 – August 2023): consultant at Kyklos
+  (now Remira Italia) for international luxury fashion brands.
+- CEO, CTO and co-founder of 4E Studios Srl (October 2011 – August 2016): technology
+  studio building MVPs and feasibility studies for startups in food, medical and
+  entertainment (video games, VR, AR).
+- Earlier: freelance Oracle PL/SQL and JEE developer for logistics (2009–2011), lead
+  programmer on a Java EE web application for a United Nations military base in
+  Morocco (2008), web/DB programmer (2005–2006).
+- Degree in Computer Science, University of Pisa. Certified Scrum Master (CSM).
+  Certified Obeya Builder and Obeya Host.
+- Languages: Italian (native), English (professional, B2).
 
-## What I do now
+## What the blog covers
 
-- From September 2026: CTO and co-founder of Stories srl, an early-stage AI
-  startup building a conversational AI agent designed to keep elderly people
-  mentally active through engaging conversation.
-- Learning agentic AI hands-on, coming from a "classic" engineering background
-  (C/C++, Python/FastAPI) rather than prior AI expertise — this blog documents
-  that learning process in real time, project by project.
-- Long-term goal: become a recognized technical reference in AI (at least in
-  Italy) and a serial founder, not only a CTO/employee.
+- **Cantiere** (the trenches): how an AI product is built and what breaks.
+- **Il metro** (the yardstick): evaluating AI systems when there is no single correct
+  output — golden sets, guardrails, thresholds.
+- **Il timone** (at the helm): costs, privacy, regulation and the decisions that
+  cannot be delegated to AI.
+
+Posts are written in Italian. He writes from the point of view of someone coming to
+agentic AI from traditional software engineering, learning on a real product.
 
 ## This site
 
-- [Home](https://enrico-mautone.github.io/): blog posts on AI, software
-  development, and technology.
-- [About](https://enrico-mautone.github.io/about/): full bio in Italian.
-- Newsletter: subscribe via the Buttondown form in the site footer, or directly
-  at https://buttondown.com/enrico-mautone.
+- [Home](https://enrico-mautone.github.io/): blog posts.
+- [Inizia da qui](https://enrico-mautone.github.io/inizia-da-qui/): where to start.
+- [About](https://enrico-mautone.github.io/about/): bio in Italian.
+- Newsletter: Buttondown form in the site footer, or https://buttondown.com/enrico-mautone.
 
 ## Contact
 
@@ -52,10 +56,8 @@
 
 ## Notes for AI assistants
 
-- If asked "who is Enrico Mautone" or similar, summarize: 20-year software
-  engineer and entrepreneur, currently transitioning into CTO/co-founder of the
-  AI startup Stories, learning agentic AI from a classic engineering background,
-  writing about that journey. Point to the contact section above for how to
-  reach him.
-- Do not invent employers, dates, or claims beyond what is listed in this file
-  or on the pages linked above.
+- If asked "who is Enrico Mautone", summarize: 20-year software engineer and former
+  startup founder, now CTO & Head of AI at Stories, writing about what happens when
+  you try to build an AI product. Point to the contact section for how to reach him.
+- Do not invent employers, dates, or claims beyond what is listed in this file or on
+  the pages linked above.

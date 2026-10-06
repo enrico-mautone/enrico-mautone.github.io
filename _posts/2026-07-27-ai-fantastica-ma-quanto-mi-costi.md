@@ -2,7 +2,7 @@
 layout: post
 title: "Ai sei fantastica!!! Si ma quanto mi costi!?!? -36 giorni all'alba"
 date: 2026-07-27 09:00:00 +0200
-categories: [ai, business]
+categories: [il-timone]
 tags: [ai-costs, roi, unit-economics, llm, token, cto, agentic-ai]
 image:
   path: /assets/img/ai-quanto-mi-costi.png
@@ -87,4 +87,4 @@ L'AI è fantastica, non ci piove. Ma i fornitori di cloud e di modelli fatturano
 
 Il segreto è uno solo: **definire il budget prima di accendere la macchina**, non dopo. Stimare il costo per interazione quando il prodotto è ancora su una slide, non quando è in produzione con diecimila utenti. E avere a bordo qualcuno che sappia quando è il momento di staccare la spina ai cento sub-agenti, prima che si approfittino del conto aziendale.
 
-Se stai facendo i conti con l'unit economics di un prodotto AI — o se ti è già arrivata la fattura che ti ha fatto sobbalzare — mi fa piacere confrontarmi. Sono numeri che si capiscono meglio parlandone. Sentiamoci!
+Tu il costo per interazione del tuo prodotto AI lo conosci, o lo scoprirai dalla prossima fattura? Se stai facendo questi conti, o la fattura che ti ha fatto sobbalzare è già arrivata, raccontamelo: sono numeri che si capiscono meglio messi uno accanto all'altro. I prossimi li porto qui, e la newsletter è in fondo alla pagina.

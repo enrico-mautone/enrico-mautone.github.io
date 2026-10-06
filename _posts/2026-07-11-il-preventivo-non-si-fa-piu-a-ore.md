@@ -2,7 +2,7 @@
 layout: post
 title: "Il preventivo non si fa più a ore - cosa vendo davvero nell'era dell'AI agentica"
 date: 2026-07-11 09:00:00 +0200
-categories: [ai, career]
+categories: [il-timone]
 tags: [ai-agents, pricing, freelance, cto, agentic-ai]
 ---
 
@@ -72,4 +72,4 @@ Non ho una risposta chiusa a questo. Il pricing del software nell'era dell'AI ag
 
 Quello che ho, per ora, è un principio più chiaro di prima — smettere di vendere tempo e iniziare a vendere consegna e giudizio — e un framework pratico da testare sul prossimo preventivo reale che scrivo. Non lo so ancora se funzionerà come immagino: lo scoprirò quando lo proverò con un cliente vero, e probabilmente tornerò a scriverne con quello che avrò imparato.
 
-Se anche a te è capitato di sbatterci contro — un preventivo che non ti convinceva, un cliente che ha notato che ci hai messo "troppo poco" tempo per quanto ti ha pagato — mi farebbe piacere confrontarmi. È esattamente il tipo di problema che si risolve meglio parlandone che pensandoci da solo.
+Se anche a te è capitato di sbatterci contro — un preventivo che non ti convinceva, un cliente che ha notato che ci hai messo "troppo poco" tempo per quanto ti ha pagato — mi farebbe piacere confrontarmi. È esattamente il tipo di problema che si risolve meglio parlandone che pensandoci da solo. E quando avrò provato questo framework su un preventivo vero, racconterò qui com'è andata: se vuoi saperlo, la newsletter è nel form in fondo alla pagina.

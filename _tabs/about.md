@@ -1,35 +1,29 @@
 ---
 # the default layout is 'page'
 icon: fas fa-info-circle
-order: 4
+order: 5
 ---
 
 Ciao, sono Enrico.
 
-Faccio informatica da quasi vent'anni. Ho iniziato scrivendo C/C++, ho passato
-anni a costruire soluzioni per clienti enterprise — gli ultimi, come Service e
-Delivery Manager per Gucci — e nel mezzo ho anche co-fondato e guidato una mia
-software house, 4E Studios, portando prodotti da zero a MVP per startup in
-settori diversi (food, medicale, entertainment).
+Faccio informatica da vent'anni. Ho cominciato scrivendo C/C++, ho passato molti anni accanto a clienti enterprise (gli ultimi tre come Service Manager per Gucci) e nel mezzo ho co-fondato e guidato per cinque anni una software house, 4E Studios, che portava le idee delle startup da zero a un MVP funzionante.
 
-Ora sto facendo un altro salto: da settembre 2026 divento **CTO e co-founder di
-Stories**, una startup che sviluppa un agente AI conversazionale pensato per
-tenere mentalmente attive le persone anziane. È un progetto che parte da zero,
-in un campo — l'AI agentica — che per me è nuovo tanto quanto lo è per chi lo
-scopre insieme a me su questo blog. Il mio background è "classico" (C/C++,
-Python/FastAPI): sto imparando l'AI agentica sul campo, un progetto reale alla
-volta, non da una posizione di expertise consolidata. Penso sia proprio questo
-il punto di vista che vale la pena condividere: quello di chi arriva all'AI da
-uno sviluppo software più tradizionale, e prova a capire cosa cambia davvero e
-cosa no.
+Dal 1° settembre 2026 sono **CTO & Head of AI di [Stories](https://stories-app.it)**, una startup che costruisce un compagno AI conversazionale per le persone anziane: conversazioni che tengono viva la mente e avvicinano le famiglie. Il prodotto lo sto costruendo con le mie mani, dall'agente conversazionale al backend, fino all'infrastruttura.
 
-Questo blog nasce per raccogliere quel percorso: note tecniche, riflessioni su
-come l'AI sta cambiando il modo in cui costruiamo software (e non solo), e gli
-errori/scoperte che faccio lungo la strada.
+## Perché questo blog
 
-Il mio obiettivo di lungo periodo è diventare un punto di riferimento tecnico
-sull'AI, almeno in Italia, e continuare a fare il founder — non solo questa
-volta, ma anche in futuro, per altre idee e altri team.
+Se ti interessa capire cosa succede davvero quando si costruisce un prodotto AI — le scelte, gli errori, le difficoltà che nessuna demo mostra — sei nel posto giusto. Qui racconto quello che accade quando tenti di costruirne uno.
 
-Mi trovi anche su [GitHub](https://github.com/enrico-mautone) e
-[LinkedIn](https://www.linkedin.com/in/enricomautone).
+Non ci troverai la novità della settimana. Ci troverai i problemi veri: come fai a sapere se un guardrail funziona, cosa deve ricordare un agente e cosa deve saper tacere, quanto costa davvero una conversazione, e quali decisioni non si possono lasciare all'AI, per quanto brava sia.
+
+Il mio punto di vista è quello di chi arriva all'AI agentica da uno sviluppo software più tradizionale. Una base di LLM ce l'avevo già; lo strato agentico lo sto imparando sul campo, un problema alla volta. Non scrivo da esperto che ha già capito tutto: scrivo mentre ci sbatto contro.
+
+## Di cosa scrivo
+
+- **[Cantiere](/categories/cantiere/)** — come è fatto un prodotto AI e cosa si rompe quando lo costruisci.
+- **[Il metro](/categories/il-metro/)** — come misuri se un sistema AI funziona, quando non esiste un risultato giusto da confrontare.
+- **[Il timone](/categories/il-timone/)** — costi, privacy, regole e persone: le decisioni che restano a chi guida.
+
+Se è la prima volta che passi di qui, parti da [Inizia da qui](/inizia-da-qui/).
+
+Mi trovi su [LinkedIn](https://www.linkedin.com/in/enricomautone) e [GitHub](https://github.com/enrico-mautone). La newsletter è nel form in fondo a ogni pagina.

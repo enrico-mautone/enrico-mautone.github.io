@@ -2,7 +2,7 @@
 layout: post
 title: "L'anima della voce - cos'è la prosodia e come l'AI ha imparato a recitare -38 giorni all'alba"
 date: 2026-07-25 09:00:00 +0200
-categories: [ai, voice, tts, agents]
+categories: [cantiere]
 tags: [tts, prosody, prosodia, voice-agents, llm, speech-synthesis]
 image:
   path: /assets/img/evoluzione-prosodia-tts.png
@@ -87,4 +87,4 @@ Per anni la sintesi vocale ha trattato l'intonazione come la ciliegina: prima fa
 
 Quindi sì, alla mia età mi tocca rifare linguistica. Ma almeno adesso so perché. E la prossima volta che il mio agente dirà "sì", saprò esattamente quale dei tre "sì" gli ho chiesto di dire.
 
-Questo è un passo nel mio percorso nella costruzione di un agente vocale reale che in futuro potrò svelarvi. Se stai lavorando su TTS conversazionale o hai sbattuto contro gli stessi problemi di prosodia, mi fa piacere confrontarmi — sono cose che si capiscono meglio parlandone. Sentiamoci!
+Questo è un passo nella costruzione di un agente vocale vero: quello di [Stories](https://stories-app.it), che deve parlare con persone anziane e farsi capire. E tu, quando hai scelto una voce sintetica per un prodotto, l'hai scelta per come suona o per come recita? Se ci stai sbattendo contro anche tu, scrivimi: sono cose che si capiscono meglio parlandone. E se vuoi sapere come va a finire, la newsletter è qui sotto.
