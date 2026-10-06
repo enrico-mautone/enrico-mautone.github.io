@@ -42,12 +42,12 @@
       <!-- Custom: language switcher (jekyll-polyglot) -->
       <li class="nav-item lang-switch">
         {% if site.active_lang == 'en' %}
-          <a href="{% static_href %}{{ page.url }}{% endstatic_href %}" class="nav-link" hreflang="it" lang="it">
+          <a {% static_href %}href="{{ page.url }}"{% endstatic_href %} class="nav-link" hreflang="it" lang="it">
             <i class="fa-fw fas fa-language"></i>
             <span>ITALIANO</span>
           </a>
         {% else %}
-          <a href="{% static_href %}/en{{ page.url }}{% endstatic_href %}" class="nav-link" hreflang="en" lang="en">
+          <a {% static_href %}href="/en{{ page.url }}"{% endstatic_href %} class="nav-link" hreflang="en" lang="en">
             <i class="fa-fw fas fa-language"></i>
             <span>ENGLISH</span>
           </a>

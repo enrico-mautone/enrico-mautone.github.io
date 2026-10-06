@@ -8,18 +8,18 @@
   {% assign _banner = nil %}
 
   {% if _site_lang == 'en' and _doc_lang == 'en' %}
-    {% capture _href %}{% static_href %}{{ page.url }}{% endstatic_href %}{% endcapture %}
+    {% capture _href %}{% static_href %}href="{{ page.url }}"{% endstatic_href %}{% endcapture %}
     {% assign _note = 'Leggi in italiano' %}
     {% assign _target = 'it' %}
     {% assign _banner = 'Questo articolo è disponibile anche in italiano.' %}
     {% assign _cta = 'Leggilo' %}
     {% assign _close = 'Chiudi' %}
   {% elsif _site_lang == 'en' %}
-    {% capture _href %}{% static_href %}{{ page.url }}{% endstatic_href %}{% endcapture %}
+    {% capture _href %}{% static_href %}href="{{ page.url }}"{% endstatic_href %}{% endcapture %}
     {% assign _note = 'This post is available in Italian only — open the original' %}
     {% assign _target = 'it' %}
   {% elsif page.translations contains 'en' %}
-    {% capture _href %}{% static_href %}/en{{ page.url }}{% endstatic_href %}{% endcapture %}
+    {% capture _href %}{% static_href %}href="/en{{ page.url }}"{% endstatic_href %}{% endcapture %}
     {% assign _note = 'Read in English' %}
     {% assign _target = 'en' %}
     {% assign _banner = 'This post is also available in English.' %}
@@ -30,7 +30,7 @@
   {% if _note %}
     <p class="lang-alt-link text-center small">
       <i class="fas fa-language fa-fw"></i>
-      <a href="{{ _href | strip }}" hreflang="{{ _target }}" lang="{{ _target }}">{{ _note }}</a>
+      <a {{ _href | strip }} hreflang="{{ _target }}" lang="{{ _target }}">{{ _note }}</a>
     </p>
   {% endif %}
 
@@ -46,7 +46,7 @@
     >
       <span>
         {{ _banner }}
-        <a href="{{ _href | strip }}" hreflang="{{ _target }}" class="alert-link">{{ _cta }} &rarr;</a>
+        <a {{ _href | strip }} hreflang="{{ _target }}" class="alert-link">{{ _cta }} &rarr;</a>
       </span>
       <button type="button" class="btn-close ms-3" aria-label="{{ _close }}"></button>
     </div>
