@@ -23,7 +23,7 @@ timezone: Europe/Rome
 
 title: Enrico Mautone # the main title
 
-tagline: Appunti dal cantiere di un prodotto AI # it will display as the subtitle
+tagline: Costruire prodotti AI — dalle trincee # it will display as the subtitle
 tagline_en: Building AI products — from the trenches # subtitle of the English site (/en/)
 
 description: >-
