@@ -23,7 +23,14 @@ jobs:
           bundler-cache: true
 
       - name: Build site
-        run: bundle exec jekyll b -d "_site"
+        run: |
+          set -o pipefail
+          if ! bundle exec jekyll b --trace -d "_site" 2>&1 | tee build.log; then
+            # Surface the error as an annotation (readable from the API without downloading logs)
+            msg=$(grep -v '^\s*$' build.log | tail -40 | sed 's/%/%25/g' | sed ':a;N;$!ba;s/\n/%0A/g')
+            echo "::error title=Jekyll build failed::${msg}"
+            exit 1
+          fi
         env:
           JEKYLL_ENV: "production"
 
