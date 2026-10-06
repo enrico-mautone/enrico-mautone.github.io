@@ -23,7 +23,8 @@ timezone: Europe/Rome
 
 title: Enrico Mautone # the main title
 
-tagline: Building AI products — from the trenches # it will display as the subtitle (same text in both languages)
+tagline: Costruire prodotti AI — dal cantiere # it will display as the subtitle
+tagline_en: Building AI products — from the trenches # subtitle of the English site (/en/)
 
 description: >-
   Cosa succede davvero quando si costruisce un prodotto AI: le scelte, gli errori e le
