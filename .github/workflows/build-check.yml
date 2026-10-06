@@ -61,6 +61,7 @@ jobs:
       - name: Report multilingual details
         if: always()
         run: |
+          set +e
           o() { echo "== $1"; grep -o "$2" "$3" 2>&1 | head -${4:-6} | cut -c1-220; }
           {
             o "html lang /" '<html lang="[^"]*"' _site/index.html
