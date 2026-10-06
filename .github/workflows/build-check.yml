@@ -27,7 +27,7 @@ jobs:
           set -o pipefail
           if ! bundle exec jekyll b --trace -d "_site" 2>&1 | tee build.log; then
             # Surface the error as an annotation (readable from the API without downloading logs)
-            msg=$(grep -v '^\s*$' build.log | tail -40 | sed 's/%/%25/g' | sed ':a;N;$!ba;s/\n/%0A/g')
+            msg=$(grep -v '^\s*$' build.log | grep -v '^\s*from ' | tail -25 | sed 's/%/%25/g' | sed ':a;N;$!ba;s/\n/%0A/g')
             echo "::error title=Jekyll build failed::${msg}"
             exit 1
           fi
