@@ -6,7 +6,7 @@ order: 1
 
 Se sei arrivato qui per la prima volta, ecco come orientarti.
 
-Questo blog racconta cosa succede quando tenti di costruire un prodotto AI. Lo scrivo mentre lo faccio, da CTO di [Stories](https://stories-app.it): per questo dentro ci trovi più domande aperte che verità definitive, e qualche errore raccontato senza troppi giri di parole.
+Questo blog racconta cosa succede quando tenti di costruire un prodotto AI. Lo scrivo mentre lo faccio, da CTO di [Stories](https://stories-app.it){:target="_blank" rel="noopener"}: per questo dentro ci trovi più domande aperte che verità definitive, e qualche errore raccontato senza troppi giri di parole.
 
 ## Tre articoli per cominciare
 

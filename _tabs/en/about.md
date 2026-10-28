@@ -6,15 +6,25 @@ order: 5
 
 Hi, I'm Enrico.
 
-I've been in software for twenty years. I started out writing C/C++, spent many years working with enterprise clients (the last three as Service Manager for Gucci), and in between I co-founded and ran a software studio, 4E Studios, for five years, taking startups' ideas from zero to a working MVP.
+I've been in software for almost thirty years, and I've never stopped getting my hands dirty. I started as a developer, writing C/C++, then Java EE and Oracle PL/SQL, also as a freelancer. For five years I was CEO and CTO of a software studio that took startups' ideas from zero to a working MVP: video games, virtual and augmented reality, food, medical. Then I worked as a consultant for large fashion companies, bridging business and technical teams, and even there, as soon as I could, I built an AI pilot myself.
 
-Since September 1, 2026 I'm **CTO & Head of AI at [Stories](https://stories-app.it)**, a startup building a conversational AI companion for older adults: conversations that keep the mind active and bring families closer. I'm building the product hands-on, from the conversational agent to the backend and the infrastructure.
+Today I'm **CTO & Head of AI at [Stories](https://stories-app.it){:target="_blank" rel="noopener"}**, a startup building a conversational AI companion for older adults: conversations that keep the mind active and bring families closer. I don't watch the product from a slide: I write it, from the conversational agent to the memory, from the Python backend on PostgreSQL to the infrastructure on Google Cloud.
+
+Outside work you'll find me on a tatami, with a guitar in my hands, tinkering with my home automation, or around a tabletop role-playing game.
 
 ## Why this blog
 
-If you want to understand what really happens when you build an AI product — the choices, the mistakes, the hard parts no demo shows — you're in the right place. Here I write about what happens when you try to build one.
+> ### This blog is not here to keep you up to date with the latest industry news.
+> There are already brilliant people explaining how amazing this technology is and the dazzling results you can get.
+>
+> If instead you want concrete results, and a real return (the famous **ROI**) on your AI investments, you'd better weigh all the facets and traps these technologies carry with them. That's what I do here: I **demystify** the promises with **hands-on** articles and videos, redo what they show you, and point out the flaws and the false assumptions. Because **practical knowledge of a topic saves you problems and money**, in your products and your projects.
+>
+> If that's your goal, you're in the right place.
+{: .prompt-warning }
 
-You won't find the news of the week here. You'll find the real problems: how you know whether a guardrail works, what an agent should remember and what it should keep quiet about, how much a conversation really costs, and which decisions you can't leave to AI, however good it is.
+Here I write about what really happens when you build an AI product — the choices, the mistakes, the hard parts no demo shows — while I'm building one.
+
+Instead of news, you'll find the real problems: how you know whether a guardrail works, what an agent should remember and what it should keep quiet about, how much a conversation really costs, and which decisions you can't leave to AI, however good it is.
 
 I come to agentic AI from traditional software engineering. I already had a foundation in LLMs; the agentic layer I'm learning in the field, one problem at a time. I'm not writing as an expert who has it all figured out: I'm writing while I run into things.
 

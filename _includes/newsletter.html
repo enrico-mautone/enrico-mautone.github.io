@@ -1,5 +1,16 @@
 <div class="newsletter-signup text-center">
-  <p class="small text-uppercase text-muted mb-2">Iscriviti alla newsletter</p>
+  {% if site.active_lang == 'en' %}
+    {% assign _nl_title = 'Subscribe to the newsletter' %}
+    {% assign _nl_label = 'Enter your email' %}
+    {% assign _nl_placeholder = 'Your email' %}
+    {% assign _nl_button = 'Subscribe' %}
+  {% else %}
+    {% assign _nl_title = 'Iscriviti alla newsletter' %}
+    {% assign _nl_label = 'Inserisci la tua email' %}
+    {% assign _nl_placeholder = 'La tua email' %}
+    {% assign _nl_button = 'Iscriviti' %}
+  {% endif %}
+  <p class="small text-uppercase text-muted mb-2">{{ _nl_title }}</p>
 
   <form
     action="https://buttondown.com/api/emails/embed-subscribe/enrico-mautone"
@@ -7,16 +18,16 @@
     class="embeddable-buttondown-form d-flex justify-content-center"
   >
     <div class="input-group input-group-sm" style="max-width: 320px;">
-      <label for="bd-email" class="visually-hidden">Enter your email</label>
+      <label for="bd-email" class="visually-hidden">{{ _nl_label }}</label>
       <input
         type="email"
         name="email"
         id="bd-email"
         class="form-control"
-        placeholder="La tua email"
+        placeholder="{{ _nl_placeholder }}"
         required
       />
-      <button type="submit" class="btn btn-outline-primary">Subscribe</button>
+      <button type="submit" class="btn btn-outline-primary">{{ _nl_button }}</button>
     </div>
   </form>
 

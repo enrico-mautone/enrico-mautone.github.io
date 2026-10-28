@@ -6,7 +6,7 @@ order: 1
 
 If this is your first time here, here's how to find your way around.
 
-This blog is about what happens when you try to build an AI product. I write it while I'm doing it, as CTO of [Stories](https://stories-app.it): that's why you'll find more open questions than final answers in it, and a few mistakes told without beating around the bush.
+This blog is about what happens when you try to build an AI product. I write it while I'm doing it, as CTO of [Stories](https://stories-app.it){:target="_blank" rel="noopener"}: that's why you'll find more open questions than final answers in it, and a few mistakes told without beating around the bush.
 
 ## Where to begin
 

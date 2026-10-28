@@ -87,4 +87,4 @@ Per anni la sintesi vocale ha trattato l'intonazione come la ciliegina: prima fa
 
 Quindi sì, alla mia età mi tocca rifare linguistica. Ma almeno adesso so perché. E la prossima volta che il mio agente dirà "sì", saprò esattamente quale dei tre "sì" gli ho chiesto di dire.
 
-Questo è un passo nella costruzione di un agente vocale vero: quello di [Stories](https://stories-app.it), che deve parlare con persone anziane e farsi capire. E tu, quando hai scelto una voce sintetica per un prodotto, l'hai scelta per come suona o per come recita? Se ci stai sbattendo contro anche tu, scrivimi: sono cose che si capiscono meglio parlandone. E se vuoi sapere come va a finire, la newsletter è qui sotto.
+Questo è un passo nella costruzione di un agente vocale vero: quello di [Stories](https://stories-app.it){:target="_blank" rel="noopener"}, che deve parlare con persone anziane e farsi capire. E tu, quando hai scelto una voce sintetica per un prodotto, l'hai scelta per come suona o per come recita? Se ci stai sbattendo contro anche tu, scrivimi: sono cose che si capiscono meglio parlandone. E se vuoi sapere come va a finire, la newsletter è qui sotto.
