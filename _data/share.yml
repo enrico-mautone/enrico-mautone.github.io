@@ -8,11 +8,11 @@
 platforms:
   - type: Linkedin
     icon: "fab fa-linkedin"
-    link: "https://www.linkedin.com/in/enricomautone/"
+    link: "https://www.linkedin.com/sharing/share-offsite/?url=URL"
 
   - type: Telegram
     icon: "fab fa-telegram"
-    link: "https://t.me/enrico_mautone"
+    link: "https://t.me/share/url?url=URL&text=TITLE"
 
   # Uncomment below if you need to.
   #
